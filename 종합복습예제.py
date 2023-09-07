@@ -7,22 +7,27 @@ while True:
 
 while True:
     gender = input("성별을 입력하세요 : ")
-    if gender == "M" and gender == "m": break
-    elif gender == "F" and gender == "f": break
+    if gender == "M" or gender == "m":
+       gen_name = "남성"
+       break
+    elif gender == "F" or gender == "f":
+         gen_name = "여성"
+         break
     else: print("성별을 잘못 입력하셨습니다. 다시 입력하세요.")
 
 while True:
-    jobs = input("직업을 입력하세요 : ")
+    jobs_name = ("", "학생", "회사원", "주부", "무직")
+    jobs = int(input("직업을 입력하세요 : "))
     if 0 < jobs < 5 : break
     print("직업이 잘못 입력되었습니다. 다시 입력하세요.")
 
+# if gender == "M" or gender == "m":
+#     gen_name = "남성"
+# else:
+#     gen_name = "여성"
+#
+# jobs_name = ("","학생","회사원","주부","무직")
 
-    if gender == "M" and gender == "m":
-        gen_name ="남성"
-    else:
-        gen_name = "여성"
-
-    jobs_name = ("","학생","회사원", "주부","무직")
 print("="*3, "회원정보", "="*3)
 print(f"이름 : {name}")
 print(f"나이 : {age}")
@@ -31,8 +36,8 @@ print(f"직업 : {jobs_name[jobs]}")
 
 
 # 2번 문제 : 핸드폰 요금 계산하기
-n= int(input())
-call = list(map(int, input().split()))
+n= int(input()) # 통화 개수
+call = list(map(int, input().split())) # 통화 시간
 
 y_pay = m_pay = 0
 for i in range(n):
