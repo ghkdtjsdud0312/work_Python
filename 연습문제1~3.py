@@ -34,6 +34,14 @@ for e in seat_num: # 향상된 for문이므로 e값을 고객이 앉고 싶어�
     else: pc[e-1] = 1
 print(cnt)
 
+seat_num = list(map(int, input().split()))
+pc = [False] * 100 # 0으로 초기화된 100개의 리스트 생성
+cnt = 0
+for e in seat_num: # 향상된 for문이므로 e값을 고객이 앉고 싶어하는 좌석 번호
+    if pc[e-1] != True : cnt += 1
+    else: pc[e-1] = True
+print(cnt)
+
 # 4번 문제 : Knuth-Morris-Pratt => KMP, Mirka-Slavko => MS
 upper_str = ""
 for e in input(): # 입력 받는 개수만큼 자동 순회
