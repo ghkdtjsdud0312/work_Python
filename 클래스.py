@@ -24,3 +24,7 @@ class TV :
         print(f"채널 : {self.channel}")
         print(f"볼륨 : {self.volume}")
 
+lg_tv=TV("LG",False,10,10)
+samsung_tv=TV("SAMSUNG",False,20,20)
+lg_tv.view_tv()
+samsung_tv.view_tv()
