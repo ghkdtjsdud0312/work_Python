@@ -1,7 +1,7 @@
 class TV:
     cnt = 0 # 클래스 맴버
     def __init__(self, name, isOn, channel, volume):
-        self.__name = name # __ 은 private 특성으로 간주 됨
+        self.__name = name # __ 변수 이름은 private 특성으로 간주 됨
         self.__isOn = isOn
         self.__channel = channel
         self.__volume = volume
