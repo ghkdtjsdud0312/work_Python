@@ -3,9 +3,9 @@
 # Flask는 웹 애플리케이션 개발을 위한 간결하고 유연한 도구
 # Flask는 마이크로 프레임워크로 분류되며, 작고 간단한 핵심 기능을 제공하면서도 확장성과 유연성을 갖추고 있음
 from flask import Flask
-add = Flask(__name__)
+app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
 def hello():
     return 'Hello, Flask !!!!'
 
